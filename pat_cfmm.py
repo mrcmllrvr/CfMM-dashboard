@@ -1508,4 +1508,4 @@ def update_table4(selected_publishers, selected_bias_ratings, selected_bias_cate
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, host='0.0.0.0', port=5000)
+    app.run_server(debug=True, host='0.0.0.0', port=10000)
