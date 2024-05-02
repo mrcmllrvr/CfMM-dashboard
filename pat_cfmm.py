@@ -73,6 +73,7 @@ unique_topics = df_train['predicted_topics'].apply(pd.Series).stack().reset_inde
 
 # Initialize the Dash application
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 # Define the layout of the application
 app.layout = html.Div(children=[
