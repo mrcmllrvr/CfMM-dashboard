@@ -71,7 +71,7 @@ df_test['quarter_published'] = df_test['quarter_published'].astype(str)
 df_test['topic'].value_counts()
 
 # Get list of unique topics
-# unique_topics = df_train['predicted_topics'].apply(pd.Series).stack().reset_index(drop = True).unique()
+unique_topics = df_train['predicted_topics'].apply(pd.Series).stack().reset_index(drop = True).unique()
 
 """# All Charts"""
 
@@ -107,7 +107,7 @@ app.layout = html.Div(children=[
         ),
         dcc.Dropdown(
             id='chart1-topic-dropdown',
-            options=[{'label': topic, 'value': topic} for topic in unique_topics],
+            options=[{'label': topic, 'value': topic} for topic in sorted(df_test['topic'].unique())],
             placeholder='Select Topic',
             multi=True,
             clearable=True,
