@@ -71,7 +71,7 @@ df_test['quarter_published'] = df_test['quarter_published'].astype(str)
 df_test['topic'].value_counts()
 
 # Get list of unique topics
-unique_topics = df_train['predicted_topics'].apply(pd.Series).stack().reset_index(drop = True).unique()
+# unique_topics = df_train['predicted_topics'].apply(pd.Series).stack().reset_index(drop = True).unique()
 
 """# All Charts"""
 
