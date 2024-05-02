@@ -41,13 +41,13 @@ if os.path.exists(test_file_path):
 else:
     print(f"File not found: {test_file_path}")
 
-# Load df_train_with_preds.pkl
-train_file_path = os.path.join(dir_path, 'df_train_with_preds.pkl')
-if os.path.exists(train_file_path):
-    with open(train_file_path, 'rb') as pickle_file:
-        df_train = pickle.load(pickle_file)
-else:
-    print(f"File not found: {train_file_path}")
+# # Load df_train_with_preds.pkl
+# train_file_path = os.path.join(dir_path, 'df_train_with_preds.pkl')
+# if os.path.exists(train_file_path):
+#     with open(train_file_path, 'rb') as pickle_file:
+#         df_train = pickle.load(pickle_file)
+# else:
+#     print(f"File not found: {train_file_path}")
 
 
 
