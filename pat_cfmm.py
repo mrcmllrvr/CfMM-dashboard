@@ -30,16 +30,20 @@ import os
 
 """# Data Prep"""
 
-# Using a universal path format and verifying the path
-dir_path = r"C:\Users\binti\OneDrive\Desktop\charts"
+import os
+import pickle
 
-# Load df_test.pkl
-test_file_path = os.path.join(dir_path, 'df_test.pkl')
+# Assuming the .pkl file is in the same directory as this script
+dir_path = os.path.dirname(os.path.abspath(__file__))  # Gets the directory of the current script
+test_file_path = os.path.join(dir_path, 'df_test.pkl')  # Constructs full path to the .pkl file
+
 if os.path.exists(test_file_path):
     with open(test_file_path, 'rb') as pickle_file:
         df_test = pickle.load(pickle_file)
 else:
     print(f"File not found: {test_file_path}")
+    print("Current directory contents:", os.listdir(dir_path))  # Lists files in current directory
+
 
 # # Load df_train_with_preds.pkl
 # train_file_path = os.path.join(dir_path, 'df_train_with_preds.pkl')
