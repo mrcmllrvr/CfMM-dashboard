@@ -1508,4 +1508,5 @@ def update_table4(selected_publishers, selected_bias_ratings, selected_bias_cate
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, host='0.0.0.0', port=10000)
+    port = int(os.environ.get("PORT", 10000))  # Default to 10000 for local testing if PORT is not set
+    app.run_server(debug=True, host='0.0.0.0', port=port)
