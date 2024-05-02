@@ -52,12 +52,12 @@ else:
 
 
 
-# Convert to string type for categorical filtering
-df_train['publisher'] = df_train['publisher'].astype(str)
-df_train['quarter_published'] = df_train['quarter_published'].astype(str)
-df_train['topics'] = df_train['predicted_topics'].apply(lambda x: '|'.join(x))
+# # Convert to string type for categorical filtering
+# df_train['publisher'] = df_train['publisher'].astype(str)
+# df_train['quarter_published'] = df_train['quarter_published'].astype(str)
+# df_train['topics'] = df_train['predicted_topics'].apply(lambda x: '|'.join(x))
 
-df_train['topics'].value_counts()
+# df_train['topics'].value_counts()
 
 # Convert to string type for categorical filtering
 df_test['publisher'] = df_test['publisher'].astype(str)
@@ -67,7 +67,7 @@ df_test['quarter_published'] = df_test['quarter_published'].astype(str)
 df_test['topic'].value_counts()
 
 # Get list of unique topics
-unique_topics = df_train['predicted_topics'].apply(pd.Series).stack().reset_index(drop = True).unique()
+# unique_topics = df_train['predicted_topics'].apply(pd.Series).stack().reset_index(drop = True).unique()
 
 """# All Charts"""
 
